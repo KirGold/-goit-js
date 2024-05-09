@@ -91,3 +91,7 @@ let chuVaki=[
     const userEye = chuVaki.map(user => user.eyeColor);
     console.log(userEye);
 
+    let menNames = chuVaki.filter(user => user.gender === 'male').map(user => user.name);
+console.log(menNames);
+
+
