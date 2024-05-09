@@ -92,6 +92,24 @@ let chuVaki=[
     console.log(userEye);
 
     let menNames = chuVaki.filter(user => user.gender === 'male').map(user => user.name);
-console.log(menNames);
+    console.log(menNames);
+
+    let inactiveUsers = chuVaki.filter(user => !user.isActive);
+    console.log(inactiveUsers);
+
+
+
+
+
+    function getUserByEmail(email) {
+        return chuVaki.find(user => user.email === email);
+    }
+    let userEmails = ['shereeanthony@kog.com', 'elmahead@omatom.com'];
+    let users = userEmails.map(email => getUserByEmail(email));
+    console.log(users);
+    
+    
+
+
 
 
