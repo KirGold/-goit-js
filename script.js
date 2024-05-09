@@ -85,15 +85,28 @@ let chuVaki=[
     },
     ];
     
+
+
+
     const userNames = chuVaki.map(user => user.name);
     console.log(userNames);
+
+
+
+
 
     const userEye = chuVaki.map(user => user.eyeColor);
     console.log(userEye);
 
+
+
+    
     let menNames = chuVaki.filter(user => user.gender === 'male').map(user => user.name);
     console.log(menNames);
 
+
+
+    
     let inactiveUsers = chuVaki.filter(user => !user.isActive);
     console.log(inactiveUsers);
 
@@ -107,9 +120,26 @@ let chuVaki=[
     let userEmails = ['shereeanthony@kog.com', 'elmahead@omatom.com'];
     let users = userEmails.map(email => getUserByEmail(email));
     console.log(users);
+
+
+
+
+
+
+    function getUsersInAgeRange(min, max) {
+        return chuVaki.filter(user => user.age >= min && user.age <= max);
+    }
+    let minAge = 25
+    let maxAge = 35
+    let usersInRange = getUsersInAgeRange(minAge, maxAge);
+    console.log(usersInRange);
     
-    
 
 
 
+    let totalBalance = 0;
+for (let i = 0; i < chuVaki.length; i++) {
+    totalBalance += chuVaki[i].balance;
+}
+console.log(totalBalance);
 
