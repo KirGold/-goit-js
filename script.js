@@ -88,3 +88,6 @@ let chuVaki=[
     const userNames = chuVaki.map(user => user.name);
     console.log(userNames);
 
+    const userEye = chuVaki.map(user => user.eyeColor);
+    console.log(userEye);
+
