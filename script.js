@@ -143,3 +143,15 @@ for (let i = 0; i < chuVaki.length; i++) {
 }
 console.log(totalBalance);
 
+
+
+
+function getUsersWithFriend(friendName) {
+    return chuVaki
+        .filter(user => user.friends.includes(friendName))
+        .map(user => user.name);
+}
+
+let friendName = 'Goldie Gentry';
+let usersWithFriend = getUsersWithFriend(friendName);
+console.log(usersWithFriend);
